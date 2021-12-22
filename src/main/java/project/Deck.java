@@ -1,10 +1,11 @@
 package project;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Deck {
 
-    ArrayList<Card> cards = new ArrayList<Card>();
+    private List<Card> cards = new ArrayList<Card>();
 
 
 }

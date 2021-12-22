@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+User -> Server: isConnected
+Server -> Battlefield : plays
+alt successful case
+Player1 ->Battlefield: wonBattle()
+else error case
+Player2 -> Battlefield :lostBattle()
+else
+Player1-> Battlefield : drawBattle()
+Player2-> Battlefield : drawBattle()
+end
+Battlefield->Server
+
+@enduml
