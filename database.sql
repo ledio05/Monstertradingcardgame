@@ -41,4 +41,12 @@ CREATE TABLE Package(
     cardid5 INT REFERENCES Card(cardid) NOT NULL
 );
 
+CREATE TABLE Marketplace(
+    id SERIAL PRIMARY KEY,
+    tradeid INT NOT NULL,
+    cardid INT REFERENCES Card(cardid) NOT NULL,
+    mindamage INT NOT NULL,
+    type varchar(50)
+);
+
 
