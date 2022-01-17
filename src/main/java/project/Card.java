@@ -1,27 +1,43 @@
 package project;
 
 
-public abstract class Card {
 
-    protected String name;
-    protected int damage;
-    protected Elementtype elementtype;
+import lombok.Getter;
+import project.Elementtype;
+import project.Monstertype;
 
-    public int getDamage() {
-        return damage;
+public class Card {
+
+    @Getter
+    private String id;
+
+    @Getter
+    private String name;
+
+    @Getter
+    private float damage;
+
+    @Getter
+    private Monstertype Monstertype;
+
+    @Getter
+    private Elementtype Elementtype;
+
+    public Card() {
+
     }
 
-    public void setDamage(int damage) {
+    public Card(String id, String name, float damage) {
+        this.id = id;
+        this.name = name;
         this.damage = damage;
     }
 
-    public Elementtype getElementtype() {
-        return elementtype;
+    public Card(String id, String name, float damage,Monstertype type, Elementtype element) {
+        this.id = id;
+        this.name = name;
+        this.damage = damage;
+        Monstertype = type;
+        Elementtype = element;
     }
-
-    public void setElementtype(Elementtype elementtype) {
-        this.elementtype = elementtype;
-    }
-
-    public abstract int getID();
 }

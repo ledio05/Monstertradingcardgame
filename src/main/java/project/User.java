@@ -1,152 +1,138 @@
 package project;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Getter;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class User {
-    private String username;
-    private String password;
+
+    @Getter
+    private final String username;
+    @Getter
+    private final String name;
+    private final String bio;
+    private final String image;
+    private final Integer coins;
+    private int games;
+    private int wins;
     private int elo;
-    private int coins = 20;
-    private boolean isLooged;
 
-    Stack stack;
 
-    private List<Package> cardpackages = new ArrayList<Package>();
-
-    public User(String username, String password, int elo, int coins){
-        this.username=username;
-        this.password=password;
-        this.elo=elo;
-        this.coins=coins;
-        this.isLooged=false;
-
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public int getElo() {
-        return elo;
-    }
-
-    public void setElo(int elo) {
+    public User(String username, String name, String bio, String image, int coins, int games, int wins, int elo){
+        this.username = username;
+        this.name = name;
+        this.bio = bio;
+        this.image = image;
+        this.coins = coins;
+        this.games = games;
+        this.wins = wins;
         this.elo = elo;
     }
 
-    public int getCoins() {
-        return coins;
-    }
-
-    public void setCoins(int coins) {
-        this.coins = coins;
-    }
-
-    public boolean isLooged() {
-        return isLooged;
-    }
-
-    public void setLooged(boolean looged) {
-        isLooged = looged;
-    }
-
-    public Stack getStack() {
-        return stack;
-    }
-
-    public boolean addCardToStack(Card card){
-
-        if(card.getID() > 0) {
-            try {
-                Connection conn = DataBaseService.getInstance().getConnection();
-                PreparedStatement ps = conn.prepareStatement("INSERT INTO Stack (username, cardid) VALUES (?, ?);");
-                ps.setString(1, this.username);
-                ps.setInt(2, card.getID());
-                int rows = ps.executeUpdate();
-                if (rows == 1) {
-                    stack.addCard(card);
-                    return true;
-                }
-                ps.close();
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-    }
-
-    public boolean removeCardFromStack(Card card){
-        if(card.getID() > 0) {
-            try {
-                Connection conn = DataBaseService.getInstance().getConnection();
-                PreparedStatement ps = conn.prepareStatement("DROP FROM Stack WHERE cardid = ?;");
-                ps.setInt(1, card.getID());
-                int rows = ps.executeUpdate();
-                if (rows == 1) {
-                    stack.removeCard(card);
-                    return true;
-                }
-                ps.close();
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-
-    }
-
-    public List<Package> getCardpackages() {
-        return cardpackages;
-    }
-
-    public boolean addCardpackages(Package cardpackage) {
-        if(cardpackage.isValid() && this.coins >= 5) { // only if package has 5 cards
-
-            this.cardpackages.add(cardpackage);
-            // update user -= 5 coins
-
-            for(Card card: cardpackage.getCards()){
-                if(this.addCardToStack(card) == false){
-                    return false;
-                }
-            }
-            updateCoins(this.coins - 5);
-            // add 5 cards to stack
-
-
-            // add new package table row
-
-            // update user table, stack table
-            return true;
-        }
-        // else do nothing
-        return false;
-    }
-
-    private boolean updateCoins(int coins){
+    public String getInfo(){
         try {
-            Connection conn = DataBaseService.getInstance().getConnection();
-            PreparedStatement ps = conn.prepareStatement("UPDATE TABLE users SET coins = ? WHERE username = ?;");
-            ps.setInt(1, coins);
-            ps.setString(2, this.username);
-            int rows = ps.executeUpdate();
-            if (rows == 1) {
-                this.coins = coins;
-                return true;
+            Map<String,String> map = new HashMap<>();
+            map.put("Name:",name);
+            map.put("Bio:",bio);
+            map.put("Image:",image);
+            map.put("Coins:",coins.toString());
+            return new ObjectMapper().writeValueAsString(map);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public String getStats(){
+        try {
+            Map<String,Integer> map = new HashMap<>();
+            map.put("Wins:",wins);
+            map.put("Games:",games);
+            return new ObjectMapper().writeValueAsString(map);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public boolean buyPackage(){
+        try {
+            if (coins < 5){
+                return false;
             }
+            Connection conn = DataBaseService.getInstance().getConnection();
+            PreparedStatement ps = conn.prepareStatement("UPDATE users SET coins = ? WHERE username = ?;");
+            ps.setInt(1,coins-5);
+            ps.setString(2,username);
+            ps.executeUpdate();
             ps.close();
             conn.close();
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;
     }
 
+    public boolean battleWon(){
+        wins++;
+        games++;
+        elo+=3;
+        return saveStats();
+    }
+
+    public boolean battleLost(){
+        games++;
+        elo-=5;
+        return saveStats();
+    }
+
+    public boolean battleDraw(){
+        games++;
+        return saveStats();
+    }
+
+    public boolean saveStats(){
+        try {
+            Connection conn = DataBaseService.getInstance().getConnection();
+            PreparedStatement ps = conn.prepareStatement("UPDATE users SET wins = ?, games = ?, elo = ? WHERE username = ?;");
+            ps.setInt(1,wins);
+            ps.setInt(2,games);
+            ps.setInt(3,elo);
+            ps.setString(4,username);
+            ps.executeUpdate();
+            ps.close();
+            conn.close();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean setUserInfo(String name, String bio, String image){
+        try {
+            Connection conn = DataBaseService.getInstance().getConnection();
+            PreparedStatement ps = conn.prepareStatement("UPDATE users SET name = ?, bio = ?, image = ? WHERE username = ?;");
+            ps.setString(1, name);
+            ps.setString(2, bio);
+            ps.setString(3, image);
+            ps.setString(4, username);
+            int affectedRows = ps.executeUpdate();
+            ps.close();
+            conn.close();
+            if (affectedRows == 1) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

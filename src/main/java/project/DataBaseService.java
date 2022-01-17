@@ -8,9 +8,9 @@ public class DataBaseService {
 
     private static DataBaseService instance;
 
-    private static final String DB_URL = "jdbc:postgresql://localhost/mtcg";
-    private static final String USER = "progres";
-    private static final String PASS = "";
+    private static final String DB_URL = "jdbc:postgresql://localhost/postgres";
+    private static final String USER = "postgres";
+    private static final String PASS = "Eridmilan12316";
 
     public static DataBaseService getInstance() {
         if (DataBaseService.instance == null) {

@@ -3,11 +3,14 @@ package project;
 public enum Monstertype {
     Goblin,
     Dragon,
-    Wizzard,
+    Wizard,
     Ork,
     Knight,
     Troll,
     Kraken,
-    Elf
+    FireElf,
+    Spell,
+    magicdice
+
 
 }
