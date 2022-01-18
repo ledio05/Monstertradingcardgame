@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54d1a388-9738-4ba3-a67d-e971a2f90b3e" name="Changes" comment="Method implementations">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/ResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ResponseHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="54d1a388-9738-4ba3-a67d-e971a2f90b3e" name="Changes" comment="Method implementations" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +193,7 @@
       <workItem from="1642182465960" duration="2672000" />
       <workItem from="1642285860024" duration="2358000" />
       <workItem from="1642345060218" duration="12487000" />
-      <workItem from="1642462124408" duration="3644000" />
+      <workItem from="1642462124408" duration="3972000" />
     </task>
     <task id="LOCAL-00001" summary="Monstertype created">
       <created>1640203847307</created>
@@ -257,38 +254,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1642463256815" />
-    <state width="1323" height="421" key="GridCell.Tab.0.bottom" timestamp="1642465780467">
+    <state width="1323" height="504" key="GridCell.Tab.0.bottom" timestamp="1642465919603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1642465780467" />
-    <state width="1323" height="421" key="GridCell.Tab.0.center" timestamp="1642465780467">
+    <state width="1323" height="504" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1642465919603" />
+    <state width="1323" height="504" key="GridCell.Tab.0.center" timestamp="1642465919602">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1642465780467" />
-    <state width="1323" height="421" key="GridCell.Tab.0.left" timestamp="1642465780466">
+    <state width="1323" height="504" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1642465919602" />
+    <state width="1323" height="504" key="GridCell.Tab.0.left" timestamp="1642465919601">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1642465780466" />
-    <state width="1323" height="421" key="GridCell.Tab.0.right" timestamp="1642465780467">
+    <state width="1323" height="504" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1642465919601" />
+    <state width="1323" height="504" key="GridCell.Tab.0.right" timestamp="1642465919602">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1642465780467" />
-    <state width="1323" height="421" key="GridCell.Tab.1.bottom" timestamp="1642465780101">
+    <state width="1323" height="504" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1642465919602" />
+    <state width="1323" height="421" key="GridCell.Tab.1.bottom" timestamp="1642465801290">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1642465780101" />
-    <state width="1323" height="421" key="GridCell.Tab.1.center" timestamp="1642465780101">
+    <state width="1323" height="421" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1642465801290" />
+    <state width="1323" height="421" key="GridCell.Tab.1.center" timestamp="1642465801289">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1642465780101" />
-    <state width="1323" height="421" key="GridCell.Tab.1.left" timestamp="1642465780100">
+    <state width="1323" height="421" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1642465801289" />
+    <state width="1323" height="421" key="GridCell.Tab.1.left" timestamp="1642465801289">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1642465780100" />
-    <state width="1323" height="421" key="GridCell.Tab.1.right" timestamp="1642465780101">
+    <state width="1323" height="421" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1642465801289" />
+    <state width="1323" height="421" key="GridCell.Tab.1.right" timestamp="1642465801290">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="421" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1642465780101" />
+    <state width="1323" height="421" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1642465801290" />
     <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1641483292006">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -307,15 +304,6 @@
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1640203941857" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/managers/TradeManager.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="rs.getInt(1)" language="JAVA" />
