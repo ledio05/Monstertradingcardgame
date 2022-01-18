@@ -48,7 +48,7 @@ public class ResponseHandler {
                         response = sessions(request);
                         break;
                     case "packages":
-                        //response = packages(request);
+                        response = packages(request);
                         break;
                     case "transactions":
                         if (parts.length != 3){
@@ -57,7 +57,7 @@ public class ResponseHandler {
                         if (parts[2].equals("packages")){
                             user = authorize(request);
                             if (user != null){
-                                //response = transactionsPackages(user,request);
+                                response = transactionsPackages(user,request);
                             } else {
                                 response = new ResponseContext("401 Unauthorized");
                             }
@@ -66,7 +66,7 @@ public class ResponseHandler {
                     case "cards":
                         user = authorize(request);
                         if (user != null){
-                           // response = showCards(user,request);
+                           response = showCards(user,request);
                         } else {
                             response = new ResponseContext("401 Unauthorized");
                         }
@@ -74,7 +74,7 @@ public class ResponseHandler {
                     case "deck":
                         user = authorize(request);
                         if (user != null){
-                           // response = requestDeck(user,request);
+                           response = requestDeck(user,request);
                         } else {
                             response = new ResponseContext("401 Unauthorized");
                         }

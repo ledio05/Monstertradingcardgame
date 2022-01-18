@@ -129,7 +129,7 @@ public class CardManager {
                 conn.close();
                 return false;
             }
-            int packageID = rs.getInt(1);
+            int packageID = rs.getInt(6);
             // Decrease Coins User
             if (!user.buyPackage()){
                 return false;
