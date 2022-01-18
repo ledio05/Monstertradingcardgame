@@ -82,7 +82,7 @@ public class ResponseHandler {
                     case "stats":
                         user = authorize(request);
                         if (user != null){
-                           // response = stats(user,request);
+                           response = stats(user,request);
                         } else {
                             response = new ResponseContext("401 Unauthorized");
                         }
@@ -90,7 +90,7 @@ public class ResponseHandler {
                     case "score":
                         user = authorize(request);
                         if (user != null){
-                            //response = scoreboard(request);
+                            response = scoreboard(request);
                         } else {
                             response = new ResponseContext("401 Unauthorized");
                         }
@@ -98,7 +98,7 @@ public class ResponseHandler {
                     case "tradings":
                         user = authorize(request);
                         if (user != null){
-                            //response = trade(request,user);
+                            response = trade(request,user);
                         } else {
                             response = new ResponseContext("401 Unauthorized");
                         }
@@ -106,7 +106,7 @@ public class ResponseHandler {
                     case "battles":
                         user = authorize(request);
                         if (user != null){
-                            //response = battle(request,user);
+                            response = battle(request,user);
                         } else {
                             response = new ResponseContext("401 Unauthorized");
                         }

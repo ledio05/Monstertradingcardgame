@@ -23,20 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54d1a388-9738-4ba3-a67d-e971a2f90b3e" name="Changes" comment="Method implementations">
-      <change afterPath="$PROJECT_DIR$/src/main/java/managers/CardManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/managers/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/Verb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/DataBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/DataBaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/Monstercard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/Monstertype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/Monstertype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/Spellcard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/Stack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testing/UnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/ResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ResponseHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +68,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/testing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SWE/SWE1-MTCG-main" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -206,7 +195,8 @@
       <workItem from="1642093280791" duration="418000" />
       <workItem from="1642182465960" duration="2672000" />
       <workItem from="1642285860024" duration="2358000" />
-      <workItem from="1642345060218" duration="11005000" />
+      <workItem from="1642345060218" duration="12487000" />
+      <workItem from="1642462124408" duration="3644000" />
     </task>
     <task id="LOCAL-00001" summary="Monstertype created">
       <created>1640203847307</created>
@@ -215,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640203847307</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final version">
+      <created>1642448764150</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642448764150</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Method implementations" />
     <MESSAGE value="Monstertype created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Monstertype created" />
+    <MESSAGE value="Final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final version" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1641815970172">
@@ -255,42 +253,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1641757883941" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1640795678014">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1642463256815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1640795678014" />
-    <state width="1323" height="251" key="GridCell.Tab.0.bottom" timestamp="1642447689803">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1642463256815" />
+    <state width="1323" height="421" key="GridCell.Tab.0.bottom" timestamp="1642465780467">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1642447689803" />
-    <state width="1323" height="251" key="GridCell.Tab.0.center" timestamp="1642447689803">
+    <state width="1323" height="421" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1642465780467" />
+    <state width="1323" height="421" key="GridCell.Tab.0.center" timestamp="1642465780467">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1642447689803" />
-    <state width="1323" height="251" key="GridCell.Tab.0.left" timestamp="1642447689803">
+    <state width="1323" height="421" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1642465780467" />
+    <state width="1323" height="421" key="GridCell.Tab.0.left" timestamp="1642465780466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1642447689803" />
-    <state width="1323" height="251" key="GridCell.Tab.0.right" timestamp="1642447689803">
+    <state width="1323" height="421" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1642465780466" />
+    <state width="1323" height="421" key="GridCell.Tab.0.right" timestamp="1642465780467">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="251" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1642447689803" />
-    <state width="1323" height="526" key="GridCell.Tab.1.bottom" timestamp="1641908909069">
+    <state width="1323" height="421" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1642465780467" />
+    <state width="1323" height="421" key="GridCell.Tab.1.bottom" timestamp="1642465780101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="526" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1641908909069" />
-    <state width="1323" height="526" key="GridCell.Tab.1.center" timestamp="1641908909068">
+    <state width="1323" height="421" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1642465780101" />
+    <state width="1323" height="421" key="GridCell.Tab.1.center" timestamp="1642465780101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="526" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1641908909068" />
-    <state width="1323" height="526" key="GridCell.Tab.1.left" timestamp="1641908909068">
+    <state width="1323" height="421" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1642465780101" />
+    <state width="1323" height="421" key="GridCell.Tab.1.left" timestamp="1642465780100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="526" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1641908909068" />
-    <state width="1323" height="526" key="GridCell.Tab.1.right" timestamp="1641908909068">
+    <state width="1323" height="421" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1642465780100" />
+    <state width="1323" height="421" key="GridCell.Tab.1.right" timestamp="1642465780101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="526" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1641908909068" />
+    <state width="1323" height="421" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1642465780101" />
     <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1641483292006">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -299,16 +297,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1641762030426" />
-    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1642431963828">
+    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1642465158771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1642431963828" />
+    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1642465158771" />
     <state x="65" y="0" key="new project wizard" timestamp="1640203941857">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1640203941857" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/managers/TradeManager.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="rs.getInt(1)" language="JAVA" />
